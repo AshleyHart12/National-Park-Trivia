@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>National Park Trivia</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="triviaTime.css">
+</head>
+
+<body>
+
+    
+
+<div id="header">
+<h1>Let's test your National Park Knowledge!</h1>
+<h6>When a new questions appears, press 't' for true, or 'f' for false</h6>
+<br>
+</div>
+
+<div id='questionBox'>
+<h4 id="question"></h4>
+<p id="score"></p>
+</div>
+
+<script>
+var questions = [
+    {q: "The hightest mountain in the US is Mount Rainier", a: "f"},
+    {q: "Mt St Helens erupted in 1985", a: "f"},
+    ];
+
+var score = 0;
+var questionIndex = 0;
+
+function renderQuestion() {
+    if (questionIndex <= (questions.length -1)) {
+        document.querySelector("#question").innerHTML = questions[questionIndex].q;
+    } else {
+        document.querySelector("#question").innerHTML = "Game Over!";
+        document.querySelector("#score").innerHTML = "Final Score " + score + " out of " + questions.length;
+    }
+}
+
+function updateScore() {
+    document.querySelector("#score").innerHTML = "Score " + score;
+}
+
+renderQuestion();
+updateScore();
+
+document.onkeyup = function(event) {
+    if (questionIndex === questions.length) {
+        return;
+    }
+
+    var userInput = event.key.toLowerCase();
+
+    if (userInput === "t" || userInput === "f") {
+
+        if (userInput === questions[questionIndex].a) {
+            alert("Correct!");
+            score++;
+            updateScore();
+        } else {
+            alert("Wrong");
+        }
+        questionIndex++;
+        renderQuestion();
+    }
+};
+
+
+</script>
+
+</body>
+</html>
