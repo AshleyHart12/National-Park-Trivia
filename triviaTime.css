@@ -5,6 +5,7 @@ body {
     background-size: 1500px 1300px;
     background-repeat: no-repeat;
     font-family: 'DM Serif Display', serif;
+   
 
 }
 
@@ -15,9 +16,9 @@ body {
     margin-top: 20px;
     padding: 20px;
     color: rgb(9, 9, 85);
-    width: 1000px;
+    /* width: 1000px; */
     height: 150px;
-    margin-left: 200px;
+    /* margin-left: 200px; */
     
 }
 
@@ -26,3 +27,9 @@ body {
     padding: 30px;
     color: rgb(9, 9, 85);
 }
+
+@media screen and (max-width: 800px) {
+    .container, #questionBox {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
