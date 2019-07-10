@@ -1,18 +1,27 @@
 body {
     /* padding: 30px; */
     text-align: center;
-    background-image: url("./snow.dng");
+    background-image: url("./background.jpg");
+    background-size: 1500px 1300px;
+    background-repeat: no-repeat;
+
 }
 
 #questionBox {
     /* border: solid; */
-    background-color: rgba(209, 238, 216, 0.301);
+    /* background-color: rgba(209, 238, 216, 0.301); */
+    background-color: rgba(106, 157, 204, 0.445);
     margin-top: 20px;
     padding: 20px;
+    color: rgb(9, 9, 85);
+    width: 1000px;
+    height: 150px;
+    margin-left: 200px;
     
 }
 
 #header {
-    background-color: darkolivegreen;
+    background-color: rgb(106, 156, 204);
     padding: 30px;
+    color: rgb(9, 9, 85);
 }
